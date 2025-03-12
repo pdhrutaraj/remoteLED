@@ -1,0 +1,2 @@
+source /home/pi/esp32/remoteLED/remoteLED/build/gdbinit/symbols
+source /home/pi/esp32/remoteLED/remoteLED/build/gdbinit/connect

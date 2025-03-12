@@ -17,8 +17,8 @@
 #include "driver/gpio.h"
 
 /* Wi-Fi Credentials */
-#define WIFI_SSID "your-SSID"
-#define WIFI_PASS "your-PASSWORD"
+#define WIFI_SSID "Redmi Note 11S"
+#define WIFI_PASS "Patientpay2015"
 
 /* API Endpoints */
 #define TOKEN_URL  "https://eapi-vijn.onrender.com/api/token/"
@@ -48,12 +48,33 @@ extern const uint8_t server_cert_pem_end[] asm("_binary_cert_pem_end");
 
 /* Initialize Wi-Fi */
 
-#define WIFI_RETRY_MAX  5  // Retry count if Wi-Fi fails
+#define WIFI_RETRY_MAX  10  // Retry count if Wi-Fi fails
 
 static EventGroupHandle_t wifi_event_group;
 const int WIFI_CONNECTED_BIT = BIT0;
 static int retry_num = 0;
 
+static void event_handler(void *arg, esp_event_base_t event_base, int32_t event_id, void *event_data) {
+    if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_START) {
+        esp_wifi_connect();
+    } else if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_DISCONNECTED) {
+        if (retry_num < WIFI_RETRY_MAX) {
+            retry_num++;
+            ESP_LOGW("WIFI", "Retrying connection... Attempt %d/%d", retry_num, WIFI_RETRY_MAX);
+            esp_wifi_connect();
+        } else {
+            ESP_LOGE("WIFI", "Wi-Fi connection failed! Restarting ESP32...");
+            esp_restart();  // Restart ESP32 after too many failed attempts
+        }
+    } else if (event_base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP) {
+        ip_event_got_ip_t* event = (ip_event_got_ip_t*) event_data;
+        ESP_LOGI("WIFI", "Connected! IP Address: " IPSTR, IP2STR(&event->ip_info.ip));
+        retry_num = 0;
+        xEventGroupSetBits(wifi_event_group, WIFI_CONNECTED_BIT);
+    }
+}
+
+/*
 static void event_handler(void *arg, esp_event_base_t event_base, int32_t event_id, void *event_data) {
     if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_START) {
         esp_wifi_connect();
@@ -72,7 +93,29 @@ static void event_handler(void *arg, esp_event_base_t event_base, int32_t event_
         xEventGroupSetBits(wifi_event_group, WIFI_CONNECTED_BIT);
     }
 }
-
+*/
+//reboot if wifi fails
+/*
+static void event_handler(void *arg, esp_event_base_t event_base, int32_t event_id, void *event_data) {
+    if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_START) {
+        esp_wifi_connect();
+    } else if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_DISCONNECTED) {
+        if (retry_num < WIFI_RETRY_MAX) {
+            esp_wifi_connect();
+            retry_num++;
+            ESP_LOGW("WIFI", "Retrying connection... Attempt %d/%d", retry_num, WIFI_RETRY_MAX);
+        } else {
+            ESP_LOGE("WIFI", "Wi-Fi connection failed. Restarting ESP32...");
+            esp_restart();  // Reboot ESP32 to try again
+        }
+    } else if (event_base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP) {
+        ip_event_got_ip_t* event = (ip_event_got_ip_t*) event_data;
+        ESP_LOGI("WIFI", "Connected! IP Address: " IPSTR, IP2STR(&event->ip_info.ip));
+        retry_num = 0;
+        xEventGroupSetBits(wifi_event_group, WIFI_CONNECTED_BIT);
+    }
+}
+*/
 void wifi_init() {
     ESP_LOGI("WIFI", "Initializing Wi-Fi...");
     wifi_event_group = xEventGroupCreate();
@@ -89,7 +132,7 @@ void wifi_init() {
     esp_event_handler_instance_t instance_got_ip;
     ESP_ERROR_CHECK(esp_event_handler_instance_register(WIFI_EVENT, ESP_EVENT_ANY_ID, &event_handler, NULL, &instance_any_id));
     ESP_ERROR_CHECK(esp_event_handler_instance_register(IP_EVENT, IP_EVENT_STA_GOT_IP, &event_handler, NULL, &instance_got_ip));
-
+/*
     wifi_config_t wifi_config = {
         .sta = {
             .ssid = WIFI_SSID,
@@ -97,6 +140,18 @@ void wifi_init() {
             .threshold.authmode = WIFI_AUTH_WPA2_PSK,
         },
     };
+*/
+    wifi_config_t wifi_config = {
+    .sta = {
+        .ssid = WIFI_SSID,
+        .password = WIFI_PASS,
+        .threshold.authmode = WIFI_AUTH_WPA2_PSK, // Force WPA2
+        .pmf_cfg = {
+            .capable = true,
+            .required = false
+        },
+    },
+};
     ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
     ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_STA, &wifi_config));
     ESP_ERROR_CHECK(esp_wifi_start());
