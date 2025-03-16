@@ -1,0 +1,6 @@
+/home/pi/remoteLED/main/remoteLED.c:25:12: warning: 'response_len' defined but not used [-Wunused-variable]
+   25 | static int response_len = 0;
+      |            ^~~~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:24:13: warning: 'response_buffer' defined but not used [-Wunused-variable]
+   24 | static char response_buffer[MAX_RESPONSE_SIZE] = {0};
+      |             ^~~~~~~~~~~~~~~

@@ -1,0 +1,2 @@
+source /home/pi/remoteLED/build/bootloader/gdbinit/symbols
+source /home/pi/remoteLED/build/bootloader/gdbinit/connect

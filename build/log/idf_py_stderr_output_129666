@@ -1,0 +1,11 @@
+/home/pi/remoteLED/main/remoteLED.c: In function 'fetch_switch_state':
+/home/pi/remoteLED/main/remoteLED.c:134:56: error: '%s' directive output may be truncated writing up to 598 bytes into a region of size 593 [-Werror=format-truncation=]
+  134 |     snprintf(auth_header, sizeof(auth_header), "Bearer %s", auth_token);
+      |                                                        ^~   ~~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:134:5: note: 'snprintf' output between 8 and 606 bytes into a destination of size 600
+  134 |     snprintf(auth_header, sizeof(auth_header), "Bearer %s", auth_token);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: some warnings being treated as errors
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:82: esp-idf/main/CMakeFiles/__idf_main.dir/remoteLED.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:6157: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:149: all] Error 2

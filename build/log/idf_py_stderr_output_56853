@@ -1,0 +1,53 @@
+/home/pi/remoteLED/main/remoteLED.c: In function '_http_event_handler':
+/home/pi/remoteLED/main/remoteLED.c:99:5: error: enumeration value 'HTTP_EVENT_ON_CONNECTED' not handled in switch [-Werror=switch]
+   99 |     switch (evt->event_id) {
+      |     ^~~~~~
+/home/pi/remoteLED/main/remoteLED.c:99:5: error: enumeration value 'HTTP_EVENT_HEADERS_SENT' not handled in switch [-Werror=switch]
+/home/pi/remoteLED/main/remoteLED.c:99:5: error: enumeration value 'HTTP_EVENT_HEADER_SENT' not handled in switch [-Werror=switch]
+/home/pi/remoteLED/main/remoteLED.c:99:5: error: enumeration value 'HTTP_EVENT_ON_HEADER' not handled in switch [-Werror=switch]
+/home/pi/remoteLED/main/remoteLED.c:99:5: error: enumeration value 'HTTP_EVENT_DISCONNECTED' not handled in switch [-Werror=switch]
+/home/pi/remoteLED/main/remoteLED.c:99:5: error: enumeration value 'HTTP_EVENT_REDIRECT' not handled in switch [-Werror=switch]
+/home/pi/remoteLED/main/remoteLED.c: At top level:
+/home/pi/remoteLED/main/remoteLED.c:151:20: error: redefinition of 'TAG'
+  151 | static const char *TAG = "ESP32_SSL";
+      |                    ^~~
+/home/pi/remoteLED/main/remoteLED.c:92:20: note: previous definition of 'TAG' with type 'const char *'
+   92 | static const char *TAG = "ESP32_SSL";
+      |                    ^~~
+/home/pi/remoteLED/main/remoteLED.c:152:13: error: redefinition of 'auth_token'
+  152 | static char auth_token[512] = "";   // Global storage for JWT access token
+      |             ^~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:93:13: note: previous definition of 'auth_token' with type 'char[512]'
+   93 | static char auth_token[512] = "";   // Global storage for JWT access token
+      |             ^~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:153:13: error: redefinition of 'response_buffer'
+  153 | static char response_buffer[MAX_HTTP_OUTPUT_BUFFER] = {0}; // Buffer for HTTP response
+      |             ^~~~~~~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:94:13: note: previous definition of 'response_buffer' with type 'char[512]'
+   94 | static char response_buffer[MAX_HTTP_OUTPUT_BUFFER] = {0}; // Buffer for HTTP response
+      |             ^~~~~~~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:154:12: error: redefinition of 'response_len'
+  154 | static int response_len = 0; // Length of received response data
+      |            ^~~~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:95:12: note: previous definition of 'response_len' with type 'int'
+   95 | static int response_len = 0; // Length of received response data
+      |            ^~~~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:157:11: error: redefinition of '_http_event_handler'
+  157 | esp_err_t _http_event_handler(esp_http_client_event_t *evt) {
+      |           ^~~~~~~~~~~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:98:11: note: previous definition of '_http_event_handler' with type 'esp_err_t(esp_http_client_event_t *)' {aka 'int(struct esp_http_client_event *)'}
+   98 | esp_err_t _http_event_handler(esp_http_client_event_t *evt) {
+      |           ^~~~~~~~~~~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c: In function '_http_event_handler':
+/home/pi/remoteLED/main/remoteLED.c:158:5: error: enumeration value 'HTTP_EVENT_ON_CONNECTED' not handled in switch [-Werror=switch]
+  158 |     switch (evt->event_id) {
+      |     ^~~~~~
+/home/pi/remoteLED/main/remoteLED.c:158:5: error: enumeration value 'HTTP_EVENT_HEADERS_SENT' not handled in switch [-Werror=switch]
+/home/pi/remoteLED/main/remoteLED.c:158:5: error: enumeration value 'HTTP_EVENT_HEADER_SENT' not handled in switch [-Werror=switch]
+/home/pi/remoteLED/main/remoteLED.c:158:5: error: enumeration value 'HTTP_EVENT_ON_HEADER' not handled in switch [-Werror=switch]
+/home/pi/remoteLED/main/remoteLED.c:158:5: error: enumeration value 'HTTP_EVENT_DISCONNECTED' not handled in switch [-Werror=switch]
+/home/pi/remoteLED/main/remoteLED.c:158:5: error: enumeration value 'HTTP_EVENT_REDIRECT' not handled in switch [-Werror=switch]
+cc1: some warnings being treated as errors
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:82: esp-idf/main/CMakeFiles/__idf_main.dir/remoteLED.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:6157: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:149: all] Error 2

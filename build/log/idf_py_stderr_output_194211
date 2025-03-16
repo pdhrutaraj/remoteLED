@@ -1,0 +1,14 @@
+/home/pi/remoteLED/main/remoteLED.c:91:29: error: 'MAX_RESPONSE_SIZE' undeclared here (not in a function)
+   91 | static char response_buffer[MAX_RESPONSE_SIZE] = {0};
+      |                             ^~~~~~~~~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c: In function '_http_event_handler':
+/home/pi/remoteLED/main/remoteLED.c:114:13: error: implicit declaration of function 'extract_auth_token' [-Wimplicit-function-declaration]
+  114 |             extract_auth_token(response_buffer);
+      |             ^~~~~~~~~~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c: At top level:
+/home/pi/remoteLED/main/remoteLED.c:91:13: warning: 'response_buffer' defined but not used [-Wunused-variable]
+   91 | static char response_buffer[MAX_RESPONSE_SIZE] = {0};
+      |             ^~~~~~~~~~~~~~~
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:82: esp-idf/main/CMakeFiles/__idf_main.dir/remoteLED.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:6157: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:149: all] Error 2

@@ -1,0 +1,36 @@
+/home/pi/remoteLED/main/remoteLED.c: In function 'fetch_switch_state':
+/home/pi/remoteLED/main/remoteLED.c:174:26: error: '_http_event_handler' undeclared (first use in this function); did you mean 'http_event_handle_cb'?
+  174 |         .event_handler = _http_event_handler,
+      |                          ^~~~~~~~~~~~~~~~~~~
+      |                          http_event_handle_cb
+/home/pi/remoteLED/main/remoteLED.c:174:26: note: each undeclared identifier is reported only once for each function it appears in
+/home/pi/remoteLED/main/remoteLED.c: At top level:
+/home/pi/remoteLED/main/remoteLED.c:332:9: warning: "MAX_HTTP_OUTPUT_BUFFER" redefined
+  332 | #define MAX_HTTP_OUTPUT_BUFFER 512  // Buffer size for HTTP response
+      |         ^~~~~~~~~~~~~~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:36:9: note: this is the location of the previous definition
+   36 | #define MAX_HTTP_OUTPUT_BUFFER 2048*2 // Increase if needed
+      |         ^~~~~~~~~~~~~~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:335:13: error: redefinition of 'auth_token'
+  335 | static char auth_token[512] = "";   // Global storage for JWT access token
+      |             ^~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:32:13: note: previous definition of 'auth_token' with type 'char[512]'
+   32 | static char auth_token[512] = "";
+      |             ^~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c: In function '_http_event_handler':
+/home/pi/remoteLED/main/remoteLED.c:341:5: error: enumeration value 'HTTP_EVENT_ON_CONNECTED' not handled in switch [-Werror=switch]
+  341 |     switch (evt->event_id) {
+      |     ^~~~~~
+/home/pi/remoteLED/main/remoteLED.c:341:5: error: enumeration value 'HTTP_EVENT_HEADERS_SENT' not handled in switch [-Werror=switch]
+/home/pi/remoteLED/main/remoteLED.c:341:5: error: enumeration value 'HTTP_EVENT_HEADER_SENT' not handled in switch [-Werror=switch]
+/home/pi/remoteLED/main/remoteLED.c:341:5: error: enumeration value 'HTTP_EVENT_ON_HEADER' not handled in switch [-Werror=switch]
+/home/pi/remoteLED/main/remoteLED.c:341:5: error: enumeration value 'HTTP_EVENT_DISCONNECTED' not handled in switch [-Werror=switch]
+/home/pi/remoteLED/main/remoteLED.c:341:5: error: enumeration value 'HTTP_EVENT_REDIRECT' not handled in switch [-Werror=switch]
+/home/pi/remoteLED/main/remoteLED.c: At top level:
+/home/pi/remoteLED/main/remoteLED.c:30:20: warning: 'TAG' defined but not used [-Wunused-variable]
+   30 | static const char *TAG = "ESP32_SSL";
+      |                    ^~~
+cc1: some warnings being treated as errors
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:82: esp-idf/main/CMakeFiles/__idf_main.dir/remoteLED.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:6157: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:149: all] Error 2

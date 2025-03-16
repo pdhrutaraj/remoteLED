@@ -1,0 +1,16 @@
+/home/pi/remoteLED/main/remoteLED.c: In function 'get_auth_token':
+/home/pi/remoteLED/main/remoteLED.c:135:22: error: '_http_event_handler' undeclared (first use in this function); did you mean 'http_event_handle_cb'?
+  135 |     .event_handler = _http_event_handler,
+      |                      ^~~~~~~~~~~~~~~~~~~
+      |                      http_event_handle_cb
+/home/pi/remoteLED/main/remoteLED.c:135:22: note: each undeclared identifier is reported only once for each function it appears in
+/home/pi/remoteLED/main/remoteLED.c: At top level:
+/home/pi/remoteLED/main/remoteLED.c:25:12: warning: 'response_len' defined but not used [-Wunused-variable]
+   25 | static int response_len = 0;
+      |            ^~~~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:24:13: warning: 'response_buffer' defined but not used [-Wunused-variable]
+   24 | static char response_buffer[MAX_RESPONSE_SIZE] = {0};
+      |             ^~~~~~~~~~~~~~~
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:82: esp-idf/main/CMakeFiles/__idf_main.dir/remoteLED.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:6157: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:149: all] Error 2

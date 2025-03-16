@@ -1,0 +1,14 @@
+/home/pi/remoteLED/main/remoteLED.c: In function '_http_event_handler':
+/home/pi/remoteLED/main/remoteLED.c:99:21: error: 'response_len' undeclared (first use in this function)
+   99 |                 if (response_len + evt->data_len < MAX_RESPONSE_SIZE - 1) {
+      |                     ^~~~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:99:21: note: each undeclared identifier is reported only once for each function it appears in
+/home/pi/remoteLED/main/remoteLED.c:99:52: error: 'MAX_RESPONSE_SIZE' undeclared (first use in this function)
+   99 |                 if (response_len + evt->data_len < MAX_RESPONSE_SIZE - 1) {
+      |                                                    ^~~~~~~~~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:100:28: error: 'response_buffer' undeclared (first use in this function)
+  100 |                     memcpy(response_buffer + response_len, evt->data, evt->data_len);
+      |                            ^~~~~~~~~~~~~~~
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:82: esp-idf/main/CMakeFiles/__idf_main.dir/remoteLED.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:6157: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:149: all] Error 2

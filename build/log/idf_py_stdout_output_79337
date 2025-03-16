@@ -1,0 +1,99 @@
+[0;32mI (746) phy_init: Saving new calibration data due to checksum failure or outdated cali�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1050-gb5ac4fbdf9 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar 15 2025 16:14:45[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2ed10h (191760) map[0m
+[0;32mI (153) esp_image: segment 1: paddr=0003ed38 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (154) esp_image: segment 2: paddr=0003ed5c vaddr=3ffb0000 size=012bch (  4796) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9eb4ch (650060) map[0m
+[0;32mI (387) esp_image: segment 4: paddr=000deb74 vaddr=3ffb12bc size=02c60h ( 11360) load[0m
+[0;32mI (391) esp_image: segment 5: paddr=000e17dc vaddr=40080000 size=178f8h ( 96504) load[0m
+[0;32mI (440) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (441) boot: Disabling RNG early entropy source...[0m
+[0;32mI (451) cpu_start: Multicore app[0m
+[0;32mI (459) cpu_start: Pro cpu start user code[0m
+[0;32mI (459) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (460) app_init: Application information:[0m
+[0;32mI (460) app_init: Project name:     remoteLED[0m
+[0;32mI (464) app_init: App version:      1[0m
+[0;32mI (467) app_init: Compile time:     Mar 15 2025 16:18:41[0m
+[0;32mI (472) app_init: ELF file SHA256:  2612d5f47...[0m
+[0;32mI (476) app_init: ESP-IDF:          v5.5-dev-1050-gb5ac4fbdf9[0m
+[0;32mI (482) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (486) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (490) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (494) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (500) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (505) heap_init: At 3FFB8980 len 00027680 (157 KiB): DRAM[0m
+[0;32mI (510) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (516) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (521) heap_init: At 400978F8 len 00008708 (33 KiB): IRAM[0m
+[0;32mI (528) spi_flash: detected chip: generic[0m
+[0;32mI (530) spi_flash: flash io: dio[0m
+[0;33mW (533) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (546) main_task: Started on CPU0[0m
+[0;32mI (556) main_task: Calling app_main()[0m
+[0;32mI (576) WIFI: Initializing Wi-Fi...[0m
+[0;32mI (586) wifi:wifi driver task: 3ffc1bc0, prio:23, stack:6656, core=0[0m
+[0;32mI (596) wifi:wifi firmware version: 34d97ea27[0m
+[0;32mI (596) wifi:wifi certification version: v7.0[0m
+[0;32mI (596) wifi:config NVS flash: enabled[0m
+[0;32mI (596) wifi:config nano formatting: disabled[0m
+[0;32mI (596) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (606) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (606) wifi:Init management short buffer num: 32[0m
+[0;32mI (616) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (616) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (626) wifi:Init static rx buffer num: 10[0m
+[0;32mI (626) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (626) wifi_init: rx ba win: 6[0m
+[0;32mI (636) wifi_init: accept mbox: 6[0m
+[0;32mI (636) wifi_init: tcpip mbox: 32[0m
+[0;32mI (636) wifi_init: udp mbox: 6[0m
+[0;32mI (646) wifi_init: tcp mbox: 6[0m
+[0;32mI (646) wifi_init: tcp tx win: 5760[0m
+[0;32mI (646) wifi_init: tcp rx win: 5760[0m
+[0;32mI (646) wifi_init: tcp mss: 1440[0m
+[0;32mI (656) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (656) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (666) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (746) wifi:mode : sta (08:b6:1f:b8:35:2c)[0m
+[0;32mI (746) wifi:enable tsf[0m
+[0;32mI (746) WIFI: Wi-Fi setup complete. Waiting for connection...[0m
+[0;32mI (766) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (766) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (776) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (786) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (806) wifi:connected with Redmi Note 11S, aid = 3, channel 11, BW20, bssid = 9a:db:b3:12:49:9f[0m
+[0;32mI (806) wifi:security: WPA2-PSK, phy: bgn, rssi: -45[0m
+[0;32mI (806) wifi:pm start, type: 1[0m
+
+[0;32mI (806) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (856) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (856) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (1846) esp_netif_handlers: sta ip: 192.168.208.246, mask: 255.255.255.0, gw: 192.168.208.107[0m
+[0;32mI (1846) WIFI: Connected! IP Address: 192.168.208.246[0m
+[0;32mI (3376) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (9396) HTTP_CLIENT: Connection timed out before data was ready![0m
+[1;31mE (9396) ESP32_SSL: HTTP POST request failed: ESP_ERR_HTTP_EAGAIN[0m
+[0;32mI (9396) main_task: Returned from app_main()[0m

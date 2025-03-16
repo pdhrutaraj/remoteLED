@@ -1,0 +1,32 @@
+/home/pi/remoteLED/main/remoteLED.c: In function 'fetch_switch_state':
+/home/pi/remoteLED/main/remoteLED.c:229:13: error: implicit declaration of function 'gpio_set_level' [-Wimplicit-function-declaration]
+  229 |             gpio_set_level(LED_GPIO, switch_state);
+      |             ^~~~~~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:26:18: error: 'GPIO_NUM_2' undeclared (first use in this function)
+   26 | #define LED_GPIO GPIO_NUM_2
+      |                  ^~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:229:28: note: in expansion of macro 'LED_GPIO'
+  229 |             gpio_set_level(LED_GPIO, switch_state);
+      |                            ^~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:26:18: note: each undeclared identifier is reported only once for each function it appears in
+   26 | #define LED_GPIO GPIO_NUM_2
+      |                  ^~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:229:28: note: in expansion of macro 'LED_GPIO'
+  229 |             gpio_set_level(LED_GPIO, switch_state);
+      |                            ^~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c: In function 'app_main':
+/home/pi/remoteLED/main/remoteLED.c:260:5: error: implicit declaration of function 'gpio_set_direction' [-Wimplicit-function-declaration]
+  260 |     gpio_set_direction(LED_GPIO, GPIO_MODE_OUTPUT);
+      |     ^~~~~~~~~~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:26:18: error: 'GPIO_NUM_2' undeclared (first use in this function)
+   26 | #define LED_GPIO GPIO_NUM_2
+      |                  ^~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:260:24: note: in expansion of macro 'LED_GPIO'
+  260 |     gpio_set_direction(LED_GPIO, GPIO_MODE_OUTPUT);
+      |                        ^~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:260:34: error: 'GPIO_MODE_OUTPUT' undeclared (first use in this function)
+  260 |     gpio_set_direction(LED_GPIO, GPIO_MODE_OUTPUT);
+      |                                  ^~~~~~~~~~~~~~~~
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:82: esp-idf/main/CMakeFiles/__idf_main.dir/remoteLED.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:6157: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:149: all] Error 2

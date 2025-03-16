@@ -1,0 +1,151 @@
+>, old:<1,0>, ap:<255,255�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1050-gb5ac4fbdf9 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar 15 2025 16:14:45[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2f120h (192800) map[0m
+[0;32mI (154) esp_image: segment 1: paddr=0003f148 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (154) esp_image: segment 2: paddr=0003f16c vaddr=3ffb0000 size=00each (  3756) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9f258h (651864) map[0m
+[0;32mI (388) esp_image: segment 4: paddr=000df280 vaddr=3ffb0eac size=030bch ( 12476) load[0m
+[0;32mI (393) esp_image: segment 5: paddr=000e2344 vaddr=40080000 size=178f8h ( 96504) load[0m
+[0;32mI (442) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (442) boot: Disabling RNG early entropy source...[0m
+[0;32mI (452) cpu_start: Multicore app[0m
+[0;32mI (461) cpu_start: Pro cpu start user code[0m
+[0;32mI (461) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (461) app_init: Application information:[0m
+[0;32mI (461) app_init: Project name:     remoteLED[0m
+[0;32mI (465) app_init: App version:      1[0m
+[0;32mI (468) app_init: Compile time:     Mar 15 2025 16:18:41[0m
+[0;32mI (473) app_init: ELF file SHA256:  722e4817f...[0m
+[0;32mI (478) app_init: ESP-IDF:          v5.5-dev-1050-gb5ac4fbdf9[0m
+[0;32mI (483) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (487) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (491) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (495) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (501) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (506) heap_init: At 3FFB8DD0 len 00027230 (156 KiB): DRAM[0m
+[0;32mI (511) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (517) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (522) heap_init: At 400978F8 len 00008708 (33 KiB): IRAM[0m
+[0;32mI (529) spi_flash: detected chip: generic[0m
+[0;32mI (531) spi_flash: flash io: dio[0m
+[0;33mW (534) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (548) main_task: Started on CPU0[0m
+[0;32mI (558) main_task: Calling app_main()[0m
+[0;32mI (578) WIFI: Initializing Wi-Fi...[0m
+[0;32mI (588) wifi:wifi driver task: 3ffc2010, prio:23, stack:6656, core=0[0m
+[0;32mI (598) wifi:wifi firmware version: 34d97ea27[0m
+[0;32mI (598) wifi:wifi certification version: v7.0[0m
+[0;32mI (598) wifi:config NVS flash: enabled[0m
+[0;32mI (598) wifi:config nano formatting: disabled[0m
+[0;32mI (608) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (608) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (608) wifi:Init management short buffer num: 32[0m
+[0;32mI (618) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (618) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (628) wifi:Init static rx buffer num: 10[0m
+[0;32mI (628) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (638) wifi_init: rx ba win: 6[0m
+[0;32mI (638) wifi_init: accept mbox: 6[0m
+[0;32mI (638) wifi_init: tcpip mbox: 32[0m
+[0;32mI (638) wifi_init: udp mbox: 6[0m
+[0;32mI (648) wifi_init: tcp mbox: 6[0m
+[0;32mI (648) wifi_init: tcp tx win: 5760[0m
+[0;32mI (648) wifi_init: tcp rx win: 5760[0m
+[0;32mI (648) wifi_init: tcp mss: 1440[0m
+[0;32mI (658) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (658) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (668) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (758) wifi:mode : sta (08:b6:1f:b8:35:2c)[0m
+[0;32mI (758) wifi:enable tsf[0m
+[0;32mI (758) WIFI: Wi-Fi setup complete. Waiting for connection...[0m
+[0;32mI (768) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (778) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (778) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (798) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (818) wifi:connected with Redmi Note 11S, aid = 1, channel 11, BW20, bssid = 9a:db:b3:12:49:9f[0m
+[0;32mI (818) wifi:security: WPA2-PSK, phy: bgn, rssi: -17[0m
+[0;32mI (818) wifi:pm start, type: 1[0m
+
+[0;32mI (818) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (848) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (848) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (1858) esp_netif_handlers: sta ip: 192.168.208.246, mask: 255.255.255.0, gw: 192.168.208.107[0m
+[0;32mI (1858) WIFI: Connected! IP Address: 192.168.208.246[0m
+[0;32mI (3148) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (7308) ESP32_SSL: Full Response: {"refresh":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0MjcyNzgxNywiaWF0IjoxNzQyMTIzMDE3LCJqdGkiOiIzZTg0YWYzMDFkN2Q0Y2FmODJhYTM2MjViN2MxZTlhOCIsInVzZXJfaWQiOjF9._INgr3DHixPhdU1T08U00wemZ-SPot26JATXxw-YyVY","access":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQyMjA5NDE3LCJpYXQiOjE3NDIxMjMwMTcsImp0aSI6IjQ2NzUxODI0MzU0YTQ5NmRhMzM1ZTJmZDczNWViZmNmIiwidXNlcl9pZCI6MX0.n3oIMkM8NXjmcYlj48r0GA_n6bxrySc7PEmZEKgAvQg"}[0m
+[0;32mI (7348) ESP32_SSL: Auth Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQyMjA5NDE3LCJpYXQiOjE3NDIxMjMwMTcsImp0aSI6IjQ2NzUxODI0MzU0YTQ5NmRhMzM1ZTJmZDczNWViZmNmIiwidXNlcl9pZCI6MX0.n3oIMkM8NXjmcYlj48r0GA_n6bxrySc7PEmZEKgAvQg[0m
+[0;32mI (7368) ESP32_SSL: auth token : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQyMjA5NDE3LCJpYXQiOjE3NDIxMjMwMTcsImp0aSI6IjQ2NzUxODI0MzU0YTQ5NmRhMzM1ZTJmZDczNWViZmNmIiwidXNlcl9pZCI6MX0.n3oIMkM8NXjmcYlj48r0GA_n6bxrySc7PEmZEKgAvQg[0m
+[0;32mI (7398) main_task: Returned from app_main()[0m
+[0;32mI (7488) wifi:<ba-add>idx:0 (ifx:0, 9a:db:b3:12:49:9f), tid:4, ssn:16, winSize:64[0m
+[0;32mI (8618) esp-x509-crt-bundle: Certificate validated[0m
+[1;31mE (9968) HTTP_CLIENT: This authentication method is not supported: Bearer realm="api"[0m
+[0;32mI (9968) ESP32_SSL: Full Response: {"detail":"Authentication credentials were not provided."}[0m
+[1;31mE (9968) ESP32_SSL: Error: Access token not found in response[0m
+[0;32mI (9978) ESP32_SSL: Switch state request successful.[0m
+[0;32mI (21218) esp-x509-crt-bundle: Certificate validated[0m
+[1;31mE (23478) HTTP_CLIENT: This authentication method is not supported: Bearer realm="api"[0m
+[0;32mI (23488) ESP32_SSL: Full Response: {"detail":"Authentication credentials were not provided."}[0m
+[1;31mE (23488) ESP32_SSL: Error: Access token not found in response[0m
+[0;32mI (23498) ESP32_SSL: Switch state request successful.[0m
+[0;32mI (34728) esp-x509-crt-bundle: Certificate validated[0m
+[1;31mE (36178) HTTP_CLIENT: This authentication method is not supported: Bearer realm="api"[0m
+[0;32mI (36178) ESP32_SSL: Full Response: {"detail":"Authentication credentials were not provided."}[0m
+[1;31mE (36188) ESP32_SSL: Error: Access token not found in response[0m
+[0;32mI (36188) ESP32_SSL: Switch state request successful.[0m
+[0;32mI (47418) esp-x509-crt-bundle: Certificate validated[0m
+[1;31mE (48668) HTTP_CLIENT: This authentication method is not supported: Bearer realm="api"[0m
+[0;32mI (48678) ESP32_SSL: Full Response: {"detail":"Authentication credentials were not provided."}[0m
+[1;31mE (48678) ESP32_SSL: Error: Access token not found in response[0m
+[0;32mI (48688) ESP32_SSL: Switch state request successful.[0m
+[0;32mI (59908) esp-x509-crt-bundle: Certificate validated[0m
+[1;31mE (61168) HTTP_CLIENT: This authentication method is not supported: Bearer realm="api"[0m
+[0;32mI (61168) ESP32_SSL: Full Response: {"detail":"Authentication credentials were not provided."}[0m
+[1;31mE (61168) ESP32_SSL: Error: Access token not found in response[0m
+[0;32mI (61178) ESP32_SSL: Switch state request successful.[0m
+[0;32mI (72548) esp-x509-crt-bundle: Certificate validated[0m
+[1;31mE (73868) HTTP_CLIENT: This authentication method is not supported: Bearer realm="api"[0m
+[0;32mI (73868) ESP32_SSL: Full Response: {"detail":"Authentication credentials were not provided."}[0m
+[1;31mE (73868) ESP32_SSL: Error: Access token not found in response[0m
+[0;32mI (73878) ESP32_SSL: Switch state request successful.[0m
+[0;32mI (85128) esp-x509-crt-bundle: Certificate validated[0m
+[1;31mE (86558) HTTP_CLIENT: This authentication method is not supported: Bearer realm="api"[0m
+[0;32mI (86568) ESP32_SSL: Full Response: {"detail":"Authentication credentials were not provided."}[0m
+[1;31mE (86568) ESP32_SSL: Error: Access token not found in response[0m
+[0;32mI (86568) ESP32_SSL: Switch state request successful.[0m
+[0;32mI (97808) esp-x509-crt-bundle: Certificate validated[0m
+[1;31mE (99258) HTTP_CLIENT: This authentication method is not supported: Bearer realm="api"[0m
+[0;32mI (99268) ESP32_SSL: Full Response: {"detail":"Authentication credentials were not provided."}[0m
+[1;31mE (99268) ESP32_SSL: Error: Access token not found in response[0m
+[0;32mI (99268) ESP32_SSL: Switch state request successful.[0m
+[0;32mI (110648) esp-x509-crt-bundle: Certificate validated[0m
+[1;31mE (111958) HTTP_CLIENT: This authentication method is not supported: Bearer realm="api"[0m
+[0;32mI (111968) ESP32_SSL: Full Response: {"detail":"Authentication credentials were not provided."}[0m
+[1;31mE (111968) ESP32_SSL: Error: Access token not found in response[0m
+[0;32mI (111968) ESP32_SSL: Switch state request successful.[0m
+[0;32mI (123208) esp-x509-crt-bundle: Certificate validated[0m
+[1;31mE (124448) HTTP_CLIENT: This authentication method is not supported: Bearer realm="api"[0m
+[0;32mI (124458) ESP32_SSL: Full Response: {"detail":"Authentication credentials were not provided."}[0m
+[1;31mE (124458) ESP32_SSL: Error: Access token not found in response[0m
+[0;32mI (124458) ESP32_SSL: Switch state request successful.[0m

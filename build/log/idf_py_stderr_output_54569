@@ -1,0 +1,13 @@
+/home/pi/remoteLED/main/remoteLED.c: In function '_http_event_handler':
+/home/pi/remoteLED/main/remoteLED.c:99:5: error: enumeration value 'HTTP_EVENT_ON_CONNECTED' not handled in switch [-Werror=switch]
+   99 |     switch (evt->event_id) {
+      |     ^~~~~~
+/home/pi/remoteLED/main/remoteLED.c:99:5: error: enumeration value 'HTTP_EVENT_HEADERS_SENT' not handled in switch [-Werror=switch]
+/home/pi/remoteLED/main/remoteLED.c:99:5: error: enumeration value 'HTTP_EVENT_HEADER_SENT' not handled in switch [-Werror=switch]
+/home/pi/remoteLED/main/remoteLED.c:99:5: error: enumeration value 'HTTP_EVENT_ON_HEADER' not handled in switch [-Werror=switch]
+/home/pi/remoteLED/main/remoteLED.c:99:5: error: enumeration value 'HTTP_EVENT_DISCONNECTED' not handled in switch [-Werror=switch]
+/home/pi/remoteLED/main/remoteLED.c:99:5: error: enumeration value 'HTTP_EVENT_REDIRECT' not handled in switch [-Werror=switch]
+cc1: some warnings being treated as errors
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:82: esp-idf/main/CMakeFiles/__idf_main.dir/remoteLED.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:6157: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:149: all] Error 2

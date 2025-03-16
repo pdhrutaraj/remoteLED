@@ -1,0 +1,126 @@
+In file included from /home/pi/remoteLED/main/remoteLED.c:5:
+/home/pi/remoteLED/main/remoteLED.c: In function '_http_event_handler':
+/home/pi/remoteLED/main/remoteLED.c:152:78: error: implicit declaration of function 'esp_http_client_get_location'; did you mean 'esp_http_client_set_method'? [-Wimplicit-function-declaration]
+  152 |             ESP_LOGW(TAG, "HTTP_EVENT_REDIRECT: Redirecting to new URL: %s", esp_http_client_get_location(evt->client));
+      |                                                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/pi/esp32/esp-idf/components/log/include/esp_log.h:140:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  140 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/home/pi/esp32/esp-idf/components/log/include/esp_log.h:71:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+   71 | #define ESP_LOGW( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_WARN,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:152:13: note: in expansion of macro 'ESP_LOGW'
+  152 |             ESP_LOGW(TAG, "HTTP_EVENT_REDIRECT: Redirecting to new URL: %s", esp_http_client_get_location(evt->client));
+      |             ^~~~~~~~
+In file included from /home/pi/esp32/esp-idf/components/log/include/esp_log.h:15:
+/home/pi/esp32/esp-idf/components/log/include/esp_log_color.h:98:31: error: format '%s' expects argument of type 'char *', but argument 6 has type 'int' [-Werror=format=]
+   98 | #define LOG_COLOR_E           ""
+      |                               ^~
+/home/pi/esp32/esp-idf/components/log/include/esp_log_format.h:15:37: note: in expansion of macro 'LOG_COLOR_E'
+   15 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                     ^~~~~~~~~~
+/home/pi/esp32/esp-idf/components/log/include/esp_log.h:140:86: note: in expansion of macro 'LOG_FORMAT'
+  140 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                      ^~~~~~~~~~
+/home/pi/esp32/esp-idf/components/log/include/esp_log.h:163:38: note: in expansion of macro 'ESP_LOG_LEVEL'
+  163 |         if (_ESP_LOG_ENABLED(level)) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                      ^~~~~~~~~~~~~
+/home/pi/esp32/esp-idf/components/log/include/esp_log.h:71:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+   71 | #define ESP_LOGW( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_WARN,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:152:13: note: in expansion of macro 'ESP_LOGW'
+  152 |             ESP_LOGW(TAG, "HTTP_EVENT_REDIRECT: Redirecting to new URL: %s", esp_http_client_get_location(evt->client));
+      |             ^~~~~~~~
+/home/pi/esp32/esp-idf/components/log/include/esp_log_color.h:99:31: error: format '%s' expects argument of type 'char *', but argument 6 has type 'int' [-Werror=format=]
+   99 | #define LOG_COLOR_W           ""
+      |                               ^~
+/home/pi/esp32/esp-idf/components/log/include/esp_log_format.h:15:37: note: in expansion of macro 'LOG_COLOR_W'
+   15 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                     ^~~~~~~~~~
+/home/pi/esp32/esp-idf/components/log/include/esp_log.h:141:86: note: in expansion of macro 'LOG_FORMAT'
+  141 |         else if (level==ESP_LOG_WARN )      { esp_log_write(ESP_LOG_WARN,       tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                      ^~~~~~~~~~
+/home/pi/esp32/esp-idf/components/log/include/esp_log.h:163:38: note: in expansion of macro 'ESP_LOG_LEVEL'
+  163 |         if (_ESP_LOG_ENABLED(level)) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                      ^~~~~~~~~~~~~
+/home/pi/esp32/esp-idf/components/log/include/esp_log.h:71:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+   71 | #define ESP_LOGW( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_WARN,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:152:13: note: in expansion of macro 'ESP_LOGW'
+  152 |             ESP_LOGW(TAG, "HTTP_EVENT_REDIRECT: Redirecting to new URL: %s", esp_http_client_get_location(evt->client));
+      |             ^~~~~~~~
+/home/pi/esp32/esp-idf/components/log/include/esp_log_color.h:101:31: error: format '%s' expects argument of type 'char *', but argument 6 has type 'int' [-Werror=format=]
+  101 | #define LOG_COLOR_D           ""
+      |                               ^~
+/home/pi/esp32/esp-idf/components/log/include/esp_log_format.h:15:37: note: in expansion of macro 'LOG_COLOR_D'
+   15 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                     ^~~~~~~~~~
+/home/pi/esp32/esp-idf/components/log/include/esp_log.h:142:86: note: in expansion of macro 'LOG_FORMAT'
+  142 |         else if (level==ESP_LOG_DEBUG )     { esp_log_write(ESP_LOG_DEBUG,      tag, LOG_FORMAT(D, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                      ^~~~~~~~~~
+/home/pi/esp32/esp-idf/components/log/include/esp_log.h:163:38: note: in expansion of macro 'ESP_LOG_LEVEL'
+  163 |         if (_ESP_LOG_ENABLED(level)) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                      ^~~~~~~~~~~~~
+/home/pi/esp32/esp-idf/components/log/include/esp_log.h:71:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+   71 | #define ESP_LOGW( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_WARN,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:152:13: note: in expansion of macro 'ESP_LOGW'
+  152 |             ESP_LOGW(TAG, "HTTP_EVENT_REDIRECT: Redirecting to new URL: %s", esp_http_client_get_location(evt->client));
+      |             ^~~~~~~~
+/home/pi/esp32/esp-idf/components/log/include/esp_log_color.h:102:31: error: format '%s' expects argument of type 'char *', but argument 6 has type 'int' [-Werror=format=]
+  102 | #define LOG_COLOR_V           ""
+      |                               ^~
+/home/pi/esp32/esp-idf/components/log/include/esp_log_format.h:15:37: note: in expansion of macro 'LOG_COLOR_V'
+   15 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                     ^~~~~~~~~~
+/home/pi/esp32/esp-idf/components/log/include/esp_log.h:143:86: note: in expansion of macro 'LOG_FORMAT'
+  143 |         else if (level==ESP_LOG_VERBOSE )   { esp_log_write(ESP_LOG_VERBOSE,    tag, LOG_FORMAT(V, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                      ^~~~~~~~~~
+/home/pi/esp32/esp-idf/components/log/include/esp_log.h:163:38: note: in expansion of macro 'ESP_LOG_LEVEL'
+  163 |         if (_ESP_LOG_ENABLED(level)) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                      ^~~~~~~~~~~~~
+/home/pi/esp32/esp-idf/components/log/include/esp_log.h:71:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+   71 | #define ESP_LOGW( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_WARN,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:152:13: note: in expansion of macro 'ESP_LOGW'
+  152 |             ESP_LOGW(TAG, "HTTP_EVENT_REDIRECT: Redirecting to new URL: %s", esp_http_client_get_location(evt->client));
+      |             ^~~~~~~~
+/home/pi/esp32/esp-idf/components/log/include/esp_log_color.h:100:31: error: format '%s' expects argument of type 'char *', but argument 6 has type 'int' [-Werror=format=]
+  100 | #define LOG_COLOR_I           ""
+      |                               ^~
+/home/pi/esp32/esp-idf/components/log/include/esp_log_format.h:15:37: note: in expansion of macro 'LOG_COLOR_I'
+   15 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                     ^~~~~~~~~~
+/home/pi/esp32/esp-idf/components/log/include/esp_log.h:144:86: note: in expansion of macro 'LOG_FORMAT'
+  144 |         else                                { esp_log_write(ESP_LOG_INFO,       tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                      ^~~~~~~~~~
+/home/pi/esp32/esp-idf/components/log/include/esp_log.h:163:38: note: in expansion of macro 'ESP_LOG_LEVEL'
+  163 |         if (_ESP_LOG_ENABLED(level)) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                      ^~~~~~~~~~~~~
+/home/pi/esp32/esp-idf/components/log/include/esp_log.h:71:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+   71 | #define ESP_LOGW( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_WARN,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:152:13: note: in expansion of macro 'ESP_LOGW'
+  152 |             ESP_LOGW(TAG, "HTTP_EVENT_REDIRECT: Redirecting to new URL: %s", esp_http_client_get_location(evt->client));
+      |             ^~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:105:5: error: enumeration value 'HTTP_EVENT_ON_HEADER' not handled in switch [-Werror=switch]
+  105 |     switch (evt->event_id) {
+      |     ^~~~~~
+/home/pi/remoteLED/main/remoteLED.c: In function 'fetch_switch_state':
+/home/pi/remoteLED/main/remoteLED.c:163:9: error: implicit declaration of function 'get_auth_token' [-Wimplicit-function-declaration]
+  163 |         get_auth_token();  // Fetch token again if missing
+      |         ^~~~~~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:170:16: error: 'SWITCH_API_URL' undeclared (first use in this function)
+  170 |         .url = SWITCH_API_URL,
+      |                ^~~~~~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:170:16: note: each undeclared identifier is reported only once for each function it appears in
+/home/pi/remoteLED/main/remoteLED.c:195:17: error: implicit declaration of function 'gpio_set_level' [-Wimplicit-function-declaration]
+  195 |                 gpio_set_level(LED_GPIO, switch_state);
+      |                 ^~~~~~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:195:32: error: 'LED_GPIO' undeclared (first use in this function)
+  195 |                 gpio_set_level(LED_GPIO, switch_state);
+      |                                ^~~~~~~~
+cc1: some warnings being treated as errors
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:82: esp-idf/main/CMakeFiles/__idf_main.dir/remoteLED.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:6157: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:149: all] Error 2

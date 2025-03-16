@@ -1,0 +1,20 @@
+/home/pi/remoteLED/main/remoteLED.c: In function '_http_event_handler':
+/home/pi/remoteLED/main/remoteLED.c:93:17: error: 'auth_token' undeclared (first use in this function)
+   93 |         strncpy(auth_token, (char *)evt->data, evt->data_len);
+      |                 ^~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:93:17: note: each undeclared identifier is reported only once for each function it appears in
+/home/pi/remoteLED/main/remoteLED.c: In function 'get_auth_token':
+/home/pi/remoteLED/main/remoteLED.c:130:24: error: 'auth_token' undeclared (first use in this function); did you mean 'get_auth_token'?
+  130 |                 strcpy(auth_token, token->valuestring);
+      |                        ^~~~~~~~~~
+      |                        get_auth_token
+/home/pi/remoteLED/main/remoteLED.c:154:1: error: expected declaration or statement at end of input
+  154 | }
+      | ^
+/home/pi/remoteLED/main/remoteLED.c: At top level:
+/home/pi/remoteLED/main/remoteLED.c:143:6: warning: 'app_main' defined but not used [-Wunused-function]
+  143 | void app_main(void) {
+      |      ^~~~~~~~
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:82: esp-idf/main/CMakeFiles/__idf_main.dir/remoteLED.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:6157: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:149: all] Error 2

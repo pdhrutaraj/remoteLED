@@ -1,0 +1,28 @@
+/home/pi/remoteLED/main/remoteLED.c: In function 'fetch_switch_state':
+/home/pi/remoteLED/main/remoteLED.c:228:13: error: implicit declaration of function 'gpio_set_level' [-Wimplicit-function-declaration]
+  228 |             gpio_set_level(LED_GPIO, switch_state);
+      |             ^~~~~~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:228:28: error: 'LED_GPIO' undeclared (first use in this function)
+  228 |             gpio_set_level(LED_GPIO, switch_state);
+      |                            ^~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:228:28: note: each undeclared identifier is reported only once for each function it appears in
+/home/pi/remoteLED/main/remoteLED.c: In function 'app_main':
+/home/pi/remoteLED/main/remoteLED.c:259:5: error: implicit declaration of function 'gpio_set_direction' [-Wimplicit-function-declaration]
+  259 |     gpio_set_direction(LED_GPIO, GPIO_MODE_OUTPUT);
+      |     ^~~~~~~~~~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:259:24: error: 'LED_GPIO' undeclared (first use in this function)
+  259 |     gpio_set_direction(LED_GPIO, GPIO_MODE_OUTPUT);
+      |                        ^~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:259:34: error: 'GPIO_MODE_OUTPUT' undeclared (first use in this function)
+  259 |     gpio_set_direction(LED_GPIO, GPIO_MODE_OUTPUT);
+      |                                  ^~~~~~~~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c: At top level:
+/home/pi/remoteLED/main/remoteLED.c:25:12: warning: 'response_len' defined but not used [-Wunused-variable]
+   25 | static int response_len = 0;
+      |            ^~~~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:24:13: warning: 'response_buffer' defined but not used [-Wunused-variable]
+   24 | static char response_buffer[MAX_RESPONSE_SIZE] = {0};
+      |             ^~~~~~~~~~~~~~~
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:82: esp-idf/main/CMakeFiles/__idf_main.dir/remoteLED.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:6157: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:149: all] Error 2

@@ -1,0 +1,11 @@
+/home/pi/remoteLED/main/remoteLED.c: In function 'get_auth_token':
+/home/pi/remoteLED/main/remoteLED.c:61:23: error: 'MAX_HTTP_OUTPUT_BUFFER' undeclared (first use in this function)
+   61 |         char response[MAX_HTTP_OUTPUT_BUFFER] = {0};  // Buffer for storing response
+      |                       ^~~~~~~~~~~~~~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:61:23: note: each undeclared identifier is reported only once for each function it appears in
+/home/pi/remoteLED/main/remoteLED.c:61:14: warning: unused variable 'response' [-Wunused-variable]
+   61 |         char response[MAX_HTTP_OUTPUT_BUFFER] = {0};  // Buffer for storing response
+      |              ^~~~~~~~
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:82: esp-idf/main/CMakeFiles/__idf_main.dir/remoteLED.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:6157: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:149: all] Error 2

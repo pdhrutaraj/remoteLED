@@ -1,0 +1,7 @@
+/home/pi/remoteLED/main/remoteLED.c: In function 'fetch_switch_state':
+/home/pi/remoteLED/main/remoteLED.c:119:15: error: assignment to expression with array type
+  119 |     auth_token="yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQyMTQ0MzIyLCJpYXQiOjE3NDIwNTc5MjIsImp0aSI6IjRjMjQ4YjNkN2RiODRhNWM4NTcxNTM0NWZhNzg4YjIyIiwidXNlcl9pZCI6MX0.47aIqm7mLyfurKX5wYYqeCgVUhUZSCXf-K8XzqAGv5o";
+      |               ^
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:82: esp-idf/main/CMakeFiles/__idf_main.dir/remoteLED.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:6157: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:149: all] Error 2

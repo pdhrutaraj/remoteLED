@@ -1,0 +1,9 @@
+/home/pi/remoteLED/main/remoteLED.c:16:13: error: expected identifier or '(' before string constant
+   16 | #define TAG "ESP32_SSL"
+      |             ^~~~~~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:27:20: note: in expansion of macro 'TAG'
+   27 | static const char *TAG = "ESP32_SSL";  // Logging tag
+      |                    ^~~
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:82: esp-idf/main/CMakeFiles/__idf_main.dir/remoteLED.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:6157: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:149: all] Error 2

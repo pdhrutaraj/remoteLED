@@ -1,0 +1,4 @@
+/home/pi/remoteLED/main/remoteLED.c: In function 'fetch_switch_state':
+/home/pi/remoteLED/main/remoteLED.c:261:15: warning: unused variable 'err' [-Wunused-variable]
+  261 |     esp_err_t err = esp_http_client_perform(client);
+      |               ^~~

@@ -1,0 +1,3 @@
+/home/pi/remoteLED/main/remoteLED.c:20:20: warning: 'TAG' defined but not used [-Wunused-variable]
+   20 | static const char *TAG = "ESP32_SSL";
+      |                    ^~~
