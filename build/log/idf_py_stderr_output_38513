@@ -1,0 +1,21 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/pi/esp32/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/pi/esp32/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x400e2eac: esp_http_client_perform at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:1304
+[0m
+[0;33m--- 0x4000c46c: memset in ROM
+0x4000c477: memset in ROM
+[0m
+[0;33m--- 0x400e2ea9: esp_http_client_perform at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:1304
+0x400d89a1: fetch_switch_state at /home/pi/remoteLED/main/remoteLED.c:245
+0x400d8a63: switch_task at /home/pi/remoteLED/main/remoteLED.c:281
+0x4008a23d: vPortTaskWrapper at /home/pi/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/pi/esp32/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/pi/esp32/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0m

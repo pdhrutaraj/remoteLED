@@ -1,0 +1,126 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/pi/esp32/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/pi/esp32/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x400d88af: _http_event_handler at /home/pi/remoteLED/main/remoteLED.c:141 (discriminator 1)
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400d88ac: _http_event_handler at /home/pi/remoteLED/main/remoteLED.c:141 (discriminator 1)
+0x401666bb: http_dispatch_event at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:204
+0x400e3126: esp_http_client_perform at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:1394
+0x400d892c: get_auth_token at /home/pi/remoteLED/main/remoteLED.c:212
+0x400d8a65: app_main at /home/pi/remoteLED/main/remoteLED.c:284
+0x4016d653: main_task at /home/pi/esp32/esp-idf/components/freertos/app_startup.c:208
+0x4008a23d: vPortTaskWrapper at /home/pi/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/pi/esp32/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/pi/esp32/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x400d88af: _http_event_handler at /home/pi/remoteLED/main/remoteLED.c:141 (discriminator 1)
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400d88ac: _http_event_handler at /home/pi/remoteLED/main/remoteLED.c:141 (discriminator 1)
+0x401666bb: http_dispatch_event at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:204
+0x400e3126: esp_http_client_perform at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:1394
+0x400d892c: get_auth_token at /home/pi/remoteLED/main/remoteLED.c:212
+0x400d8a65: app_main at /home/pi/remoteLED/main/remoteLED.c:284
+0x4016d653: main_task at /home/pi/esp32/esp-idf/components/freertos/app_startup.c:208
+0x4008a23d: vPortTaskWrapper at /home/pi/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/pi/esp32/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/pi/esp32/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x400d88af: _http_event_handler at /home/pi/remoteLED/main/remoteLED.c:141 (discriminator 1)
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400d88ac: _http_event_handler at /home/pi/remoteLED/main/remoteLED.c:141 (discriminator 1)
+0x401666bb: http_dispatch_event at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:204
+0x400e3126: esp_http_client_perform at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:1394
+0x400d892c: get_auth_token at /home/pi/remoteLED/main/remoteLED.c:212
+0x400d8a65: app_main at /home/pi/remoteLED/main/remoteLED.c:284
+0x4016d653: main_task at /home/pi/esp32/esp-idf/components/freertos/app_startup.c:208
+0x4008a23d: vPortTaskWrapper at /home/pi/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/pi/esp32/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/pi/esp32/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x400d88af: _http_event_handler at /home/pi/remoteLED/main/remoteLED.c:141 (discriminator 1)
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400d88ac: _http_event_handler at /home/pi/remoteLED/main/remoteLED.c:141 (discriminator 1)
+0x401666bb: http_dispatch_event at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:204
+0x400e3126: esp_http_client_perform at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:1394
+0x400d892c: get_auth_token at /home/pi/remoteLED/main/remoteLED.c:212
+0x400d8a65: app_main at /home/pi/remoteLED/main/remoteLED.c:284
+0x4016d653: main_task at /home/pi/esp32/esp-idf/components/freertos/app_startup.c:208
+0x4008a23d: vPortTaskWrapper at /home/pi/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/pi/esp32/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/pi/esp32/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x400d88af: _http_event_handler at /home/pi/remoteLED/main/remoteLED.c:141 (discriminator 1)
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400d88ac: _http_event_handler at /home/pi/remoteLED/main/remoteLED.c:141 (discriminator 1)
+0x401666bb: http_dispatch_event at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:204
+0x400e3126: esp_http_client_perform at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:1394
+0x400d892c: get_auth_token at /home/pi/remoteLED/main/remoteLED.c:212
+0x400d8a65: app_main at /home/pi/remoteLED/main/remoteLED.c:284
+0x4016d653: main_task at /home/pi/esp32/esp-idf/components/freertos/app_startup.c:208
+0x4008a23d: vPortTaskWrapper at /home/pi/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/pi/esp32/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/pi/esp32/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x400d88af: _http_event_handler at /home/pi/remoteLED/main/remoteLED.c:141 (discriminator 1)
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400d88ac: _http_event_handler at /home/pi/remoteLED/main/remoteLED.c:141 (discriminator 1)
+0x401666bb: http_dispatch_event at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:204
+0x400e3126: esp_http_client_perform at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:1394
+0x400d892c: get_auth_token at /home/pi/remoteLED/main/remoteLED.c:212
+0x400d8a65: app_main at /home/pi/remoteLED/main/remoteLED.c:284
+0x4016d653: main_task at /home/pi/esp32/esp-idf/components/freertos/app_startup.c:208
+0x4008a23d: vPortTaskWrapper at /home/pi/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/pi/esp32/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/pi/esp32/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x400d88af: _http_event_handler at /home/pi/remoteLED/main/remoteLED.c:141 (discriminator 1)
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400d88ac: _http_event_handler at /home/pi/remoteLED/main/remoteLED.c:141 (discriminator 1)
+0x401666bb: http_dispatch_event at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:204
+0x400e3126: esp_http_client_perform at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:1394
+0x400d892c: get_auth_token at /home/pi/remoteLED/main/remoteLED.c:212
+0x400d8a65: app_main at /home/pi/remoteLED/main/remoteLED.c:284
+0x4016d653: main_task at /home/pi/esp32/esp-idf/components/freertos/app_startup.c:208
+0x4008a23d: vPortTaskWrapper at /home/pi/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/pi/esp32/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/pi/esp32/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0m

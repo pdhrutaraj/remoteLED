@@ -129,26 +129,12 @@ esp_err_t _http_event_handler(esp_http_client_event_t *evt) {
                     ESP_LOGI(TAG, "Auth Token: %s", auth_token);
                 } else {
                     //ESP_LOGE(TAG, "Error: Access token not found in response");
+		
                 }
                 cJSON_Delete(json);
-	    	if(auth_token > 0){
-			ESP_LOGI(TAG, "Auth token available...");
-			//
-		/*
-		cJSON *switch_obj = cJSON_GetArrayItem(json, 0);  // Get first switch object
-                if (switch_obj) {
-                    cJSON *state = cJSON_GetObjectItem(json, "state");
-                    if (cJSON_IsString(state)) {
-                        ESP_LOGI(TAG, "Switch State: %s", state->valuestring);
-                        control_led(state->valuestring);  // Control LED
-                    }
-                 } else {
-                    ESP_LOGE(TAG, "Error: No switch data found");
-                }
-                cJSON_Delete(json);
-		*/
-			//
-		}
+	    	//if(auth_token > 0){
+
+		//}
 
             } else {
                 ESP_LOGE(TAG, "Error: Failed to parse JSON");
@@ -237,7 +223,7 @@ void get_auth_token() {
 // Function to fetch switch state
 
 //working
-
+/*
 void fetch_switch_state() {
     char auth_header[600];  // Buffer to store the Authorization header
     //ESP_LOGI(TAG, "Auth Token: %s", auth_token);
@@ -257,16 +243,138 @@ void fetch_switch_state() {
     esp_http_client_set_header(client, "Content-Type", "application/json");
 
     esp_err_t err = esp_http_client_perform(client);
-    if (err == ESP_OK) {
+
+    //if (err == ESP_OK) {
         //ESP_LOGI(TAG, "Switch state request successful.");
 	
+    //} else {
+        ESP_LOGE(TAG, "HTTP GET failed: %s", esp_err_to_name(err));
+    //}
+
+    esp_http_client_cleanup(client);
+
+	if (err == ESP_OK) {
+        ESP_LOGI(TAG, "Switch state request successful...");
+        char response[512] = {0};
+        esp_http_client_read(client, response, sizeof(response) - 1);
+        ESP_LOGI(TAG, "Switch state response : %s ",response);
+        
+        cJSON *json = cJSON_Parse(response);
+        if (json) {
+            cJSON *state = cJSON_GetObjectItem(json, "state");
+            if (cJSON_IsNumber(state)) {
+                int switch_state = state->valueint;
+                gpio_set_level(LED_GPIO, switch_state);
+                ESP_LOGI(TAG, "Switch state: %d, LED: %s", switch_state, switch_state ? "ON" : "OFF");
+            }
+            cJSON_Delete(json);
+        }
+    } else {
+        ESP_LOGE(TAG, "HTTP GET request failed: %s", esp_err_to_name(err));
+    }
+
+}
+*/
+
+//improved
+// Global buffer to store the response body
+static char response_buffer[1024];
+static int response_index = 0;
+
+// HTTP event handler to collect response data
+esp_err_t _http_event_handler_1(esp_http_client_event_t *evt) {
+    switch (evt->event_id) {
+        case HTTP_EVENT_ON_DATA:
+            // Append the received data to the response buffer
+            if (response_index + evt->data_len < sizeof(response_buffer)) {
+                memcpy(response_buffer + response_index, evt->data, evt->data_len);
+                response_index += evt->data_len;
+                response_buffer[response_index] = '\0';  // Null-terminate the buffer
+            }
+            break;
+
+        case HTTP_EVENT_ON_FINISH:
+            // Log the full response
+            ESP_LOGI(TAG, "Full Response: %s", response_buffer);
+            break;
+
+        default:
+            break;
+    }
+    return ESP_OK;
+}
+
+void fetch_switch_state() {
+    char auth_header[600];
+    snprintf(auth_header, sizeof(auth_header), "Bearer %s", auth_token);
+
+    esp_http_client_config_t config = {
+        .url = "https://eapi-vijn.onrender.com/api/switches/",
+        .event_handler = _http_event_handler_1,
+        .method = HTTP_METHOD_GET,
+        .crt_bundle_attach = esp_crt_bundle_attach,
+    };
+
+    // Initialize the response buffer
+    memset(response_buffer, 0, sizeof(response_buffer));
+    response_index = 0;
+
+    esp_http_client_handle_t client = esp_http_client_init(&config);
+    esp_http_client_set_header(client, "Authorization", auth_header);
+    esp_http_client_set_header(client, "Content-Type", "application/json");
+
+    esp_err_t err = esp_http_client_perform(client);
+    if (err == ESP_OK) {
+        // Log the HTTP status code
+        int status_code = esp_http_client_get_status_code(client);
+        ESP_LOGI(TAG, "HTTP Status Code: %d", status_code);
+
+        // Log the content length from headers
+        int content_length = esp_http_client_get_content_length(client);
+        ESP_LOGI(TAG, "Content Length: %d", content_length);
+
+        // Log the response length
+        ESP_LOGI(TAG, "Response Length: %d", response_index);
+
+        // Parse the JSON response
+        cJSON *json = cJSON_Parse(response_buffer);
+        if (json) {
+            // Check if the response is an array
+            if (cJSON_IsArray(json)) {
+                // Get the first object in the array
+                cJSON *first_item = cJSON_GetArrayItem(json, 0);
+                if (first_item) {
+                    // Extract the "state" field
+                    cJSON *state = cJSON_GetObjectItem(first_item, "state");
+                    if (cJSON_IsBool(state)) {
+                        bool switch_state = cJSON_IsTrue(state);
+                        gpio_set_level(LED_GPIO, switch_state);
+                        ESP_LOGI(TAG, "Switch state: %d, LED: %s", switch_state, switch_state ? "ON" : "OFF");
+                    } else {
+                        ESP_LOGE(TAG, "Invalid 'state' field in JSON");
+                    }
+                } else {
+                    ESP_LOGE(TAG, "No items found in the JSON array");
+                }
+            } else {
+                ESP_LOGE(TAG, "Expected JSON array in response");
+            }
+            cJSON_Delete(json);  // Free the JSON object
+        } else {
+            ESP_LOGE(TAG, "Failed to parse JSON response");
+            // Log the error position if available
+            const char *error_ptr = cJSON_GetErrorPtr();
+            if (error_ptr) {
+                ESP_LOGE(TAG, "Error before: %s", error_ptr);
+            }
+        }
     } else {
         ESP_LOGE(TAG, "HTTP GET failed: %s", esp_err_to_name(err));
     }
 
     esp_http_client_cleanup(client);
 }
-
+//
 // Task to continuously fetch switch state
 void switch_task(void *pvParameters) {
     while (1) {

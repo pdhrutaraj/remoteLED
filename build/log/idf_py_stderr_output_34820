@@ -1,0 +1,37 @@
+/home/pi/remoteLED/main/remoteLED.c: In function '_http_event_handler':
+/home/pi/remoteLED/main/remoteLED.c:113:5: error: enumeration value 'HTTP_EVENT_ERROR' not handled in switch [-Werror=switch]
+  113 |     switch (evt->event_id) {
+      |     ^~~~~~
+/home/pi/remoteLED/main/remoteLED.c:113:5: error: enumeration value 'HTTP_EVENT_ON_CONNECTED' not handled in switch [-Werror=switch]
+/home/pi/remoteLED/main/remoteLED.c:113:5: error: enumeration value 'HTTP_EVENT_HEADERS_SENT' not handled in switch [-Werror=switch]
+/home/pi/remoteLED/main/remoteLED.c:113:5: error: enumeration value 'HTTP_EVENT_HEADER_SENT' not handled in switch [-Werror=switch]
+/home/pi/remoteLED/main/remoteLED.c:113:5: error: enumeration value 'HTTP_EVENT_ON_HEADER' not handled in switch [-Werror=switch]
+/home/pi/remoteLED/main/remoteLED.c:113:5: error: enumeration value 'HTTP_EVENT_DISCONNECTED' not handled in switch [-Werror=switch]
+/home/pi/remoteLED/main/remoteLED.c:113:5: error: enumeration value 'HTTP_EVENT_REDIRECT' not handled in switch [-Werror=switch]
+/home/pi/remoteLED/main/remoteLED.c:139:15: error: 'else' without a previous 'if'
+  139 |             } else {
+      |               ^~~~
+/home/pi/remoteLED/main/remoteLED.c:143:13: error: break statement not within loop or switch
+  143 |             break;
+      |             ^~~~~
+/home/pi/remoteLED/main/remoteLED.c:145:9: error: 'default' label not within a switch statement
+  145 |         default:
+      |         ^~~~~~~
+/home/pi/remoteLED/main/remoteLED.c:146:13: error: break statement not within loop or switch
+  146 |             break;
+      |             ^~~~~
+/home/pi/remoteLED/main/remoteLED.c: At top level:
+/home/pi/remoteLED/main/remoteLED.c:148:5: error: expected identifier or '(' before 'return'
+  148 |     return ESP_OK;
+      |     ^~~~~~
+/home/pi/remoteLED/main/remoteLED.c:149:1: error: expected identifier or '(' before '}' token
+  149 | }
+      | ^
+/home/pi/remoteLED/main/remoteLED.c: In function '_http_event_handler':
+/home/pi/remoteLED/main/remoteLED.c:147:5: error: control reaches end of non-void function [-Werror=return-type]
+  147 |     }
+      |     ^
+cc1: some warnings being treated as errors
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:82: esp-idf/main/CMakeFiles/__idf_main.dir/remoteLED.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:6157: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:149: all] Error 2

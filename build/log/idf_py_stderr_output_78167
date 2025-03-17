@@ -1,0 +1,234 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/pi/esp32/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/pi/esp32/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x400d8b14: case_insensitive_strcmp at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:145 (discriminator 5)
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400d8b11: case_insensitive_strcmp at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:145 (discriminator 2)
+0x400d8f6a: get_object_item at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:1917 (discriminator 1)
+0x400d9481: cJSON_GetObjectItem at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:1932
+0x400d88ce: _http_event_handler at /home/pi/remoteLED/main/remoteLED.c:139
+0x4016673f: http_dispatch_event at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:204
+0x400e318e: esp_http_client_perform at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:1394
+0x400d897c: get_auth_token at /home/pi/remoteLED/main/remoteLED.c:212
+0x400d8ab1: app_main at /home/pi/remoteLED/main/remoteLED.c:284
+0x4016d6d7: main_task at /home/pi/esp32/esp-idf/components/freertos/app_startup.c:208
+0x4008a23d: vPortTaskWrapper at /home/pi/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/pi/esp32/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/pi/esp32/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x400d8b14: case_insensitive_strcmp at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:145 (discriminator 5)
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400d8b11: case_insensitive_strcmp at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:145 (discriminator 2)
+0x400d8f6a: get_object_item at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:1917 (discriminator 1)
+0x400d9481: cJSON_GetObjectItem at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:1932
+0x400d88ce: _http_event_handler at /home/pi/remoteLED/main/remoteLED.c:139
+0x4016673f: http_dispatch_event at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:204
+0x400e318e: esp_http_client_perform at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:1394
+0x400d897c: get_auth_token at /home/pi/remoteLED/main/remoteLED.c:212
+0x400d8ab1: app_main at /home/pi/remoteLED/main/remoteLED.c:284
+0x4016d6d7: main_task at /home/pi/esp32/esp-idf/components/freertos/app_startup.c:208
+0x4008a23d: vPortTaskWrapper at /home/pi/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/pi/esp32/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/pi/esp32/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x400d8b14: case_insensitive_strcmp at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:145 (discriminator 5)
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400d8b11: case_insensitive_strcmp at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:145 (discriminator 2)
+0x400d8f6a: get_object_item at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:1917 (discriminator 1)
+0x400d9481: cJSON_GetObjectItem at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:1932
+0x400d88ce: _http_event_handler at /home/pi/remoteLED/main/remoteLED.c:139
+0x4016673f: http_dispatch_event at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:204
+0x400e318e: esp_http_client_perform at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:1394
+0x400d897c: get_auth_token at /home/pi/remoteLED/main/remoteLED.c:212
+0x400d8ab1: app_main at /home/pi/remoteLED/main/remoteLED.c:284
+0x4016d6d7: main_task at /home/pi/esp32/esp-idf/components/freertos/app_startup.c:208
+0x4008a23d: vPortTaskWrapper at /home/pi/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/pi/esp32/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/pi/esp32/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x400d8b14: case_insensitive_strcmp at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:145 (discriminator 5)
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400d8b11: case_insensitive_strcmp at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:145 (discriminator 2)
+0x400d8f6a: get_object_item at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:1917 (discriminator 1)
+0x400d9481: cJSON_GetObjectItem at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:1932
+0x400d88ce: _http_event_handler at /home/pi/remoteLED/main/remoteLED.c:139
+0x4016673f: http_dispatch_event at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:204
+0x400e318e: esp_http_client_perform at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:1394
+0x400d897c: get_auth_token at /home/pi/remoteLED/main/remoteLED.c:212
+0x400d8ab1: app_main at /home/pi/remoteLED/main/remoteLED.c:284
+0x4016d6d7: main_task at /home/pi/esp32/esp-idf/components/freertos/app_startup.c:208
+0x4008a23d: vPortTaskWrapper at /home/pi/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/pi/esp32/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/pi/esp32/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x400d8b14: case_insensitive_strcmp at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:145 (discriminator 5)
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400d8b11: case_insensitive_strcmp at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:145 (discriminator 2)
+0x400d8f6a: get_object_item at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:1917 (discriminator 1)
+0x400d9481: cJSON_GetObjectItem at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:1932
+0x400d88ce: _http_event_handler at /home/pi/remoteLED/main/remoteLED.c:139
+0x4016673f: http_dispatch_event at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:204
+0x400e318e: esp_http_client_perform at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:1394
+0x400d897c: get_auth_token at /home/pi/remoteLED/main/remoteLED.c:212
+0x400d8ab1: app_main at /home/pi/remoteLED/main/remoteLED.c:284
+0x4016d6d7: main_task at /home/pi/esp32/esp-idf/components/freertos/app_startup.c:208
+0x4008a23d: vPortTaskWrapper at /home/pi/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/pi/esp32/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/pi/esp32/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x400d8b14: case_insensitive_strcmp at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:145 (discriminator 5)
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400d8b11: case_insensitive_strcmp at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:145 (discriminator 2)
+0x400d8f6a: get_object_item at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:1917 (discriminator 1)
+0x400d9481: cJSON_GetObjectItem at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:1932
+0x400d88ce: _http_event_handler at /home/pi/remoteLED/main/remoteLED.c:139
+0x4016673f: http_dispatch_event at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:204
+0x400e318e: esp_http_client_perform at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:1394
+0x400d897c: get_auth_token at /home/pi/remoteLED/main/remoteLED.c:212
+0x400d8ab1: app_main at /home/pi/remoteLED/main/remoteLED.c:284
+0x4016d6d7: main_task at /home/pi/esp32/esp-idf/components/freertos/app_startup.c:208
+0x4008a23d: vPortTaskWrapper at /home/pi/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/pi/esp32/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/pi/esp32/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x400d8b14: case_insensitive_strcmp at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:145 (discriminator 5)
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400d8b11: case_insensitive_strcmp at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:145 (discriminator 2)
+0x400d8f6a: get_object_item at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:1917 (discriminator 1)
+0x400d9481: cJSON_GetObjectItem at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:1932
+0x400d88ce: _http_event_handler at /home/pi/remoteLED/main/remoteLED.c:139
+0x4016673f: http_dispatch_event at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:204
+0x400e318e: esp_http_client_perform at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:1394
+0x400d897c: get_auth_token at /home/pi/remoteLED/main/remoteLED.c:212
+0x400d8ab1: app_main at /home/pi/remoteLED/main/remoteLED.c:284
+0x4016d6d7: main_task at /home/pi/esp32/esp-idf/components/freertos/app_startup.c:208
+0x4008a23d: vPortTaskWrapper at /home/pi/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/pi/esp32/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/pi/esp32/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x400d8b14: case_insensitive_strcmp at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:145 (discriminator 5)
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400d8b11: case_insensitive_strcmp at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:145 (discriminator 2)
+0x400d8f6a: get_object_item at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:1917 (discriminator 1)
+0x400d9481: cJSON_GetObjectItem at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:1932
+0x400d88ce: _http_event_handler at /home/pi/remoteLED/main/remoteLED.c:139
+0x4016673f: http_dispatch_event at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:204
+0x400e318e: esp_http_client_perform at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:1394
+0x400d897c: get_auth_token at /home/pi/remoteLED/main/remoteLED.c:212
+0x400d8ab1: app_main at /home/pi/remoteLED/main/remoteLED.c:284
+0x4016d6d7: main_task at /home/pi/esp32/esp-idf/components/freertos/app_startup.c:208
+0x4008a23d: vPortTaskWrapper at /home/pi/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/pi/esp32/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/pi/esp32/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x400d8b14: case_insensitive_strcmp at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:145 (discriminator 5)
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400d8b11: case_insensitive_strcmp at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:145 (discriminator 2)
+0x400d8f6a: get_object_item at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:1917 (discriminator 1)
+0x400d9481: cJSON_GetObjectItem at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:1932
+0x400d88ce: _http_event_handler at /home/pi/remoteLED/main/remoteLED.c:139
+0x4016673f: http_dispatch_event at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:204
+0x400e318e: esp_http_client_perform at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:1394
+0x400d897c: get_auth_token at /home/pi/remoteLED/main/remoteLED.c:212
+0x400d8ab1: app_main at /home/pi/remoteLED/main/remoteLED.c:284
+0x4016d6d7: main_task at /home/pi/esp32/esp-idf/components/freertos/app_startup.c:208
+0x4008a23d: vPortTaskWrapper at /home/pi/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/pi/esp32/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/pi/esp32/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x400d8b14: case_insensitive_strcmp at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:145 (discriminator 5)
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400d8b11: case_insensitive_strcmp at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:145 (discriminator 2)
+0x400d8f6a: get_object_item at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:1917 (discriminator 1)
+0x400d9481: cJSON_GetObjectItem at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:1932
+0x400d88ce: _http_event_handler at /home/pi/remoteLED/main/remoteLED.c:139
+0x4016673f: http_dispatch_event at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:204
+0x400e318e: esp_http_client_perform at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:1394
+0x400d897c: get_auth_token at /home/pi/remoteLED/main/remoteLED.c:212
+0x400d8ab1: app_main at /home/pi/remoteLED/main/remoteLED.c:284
+0x4016d6d7: main_task at /home/pi/esp32/esp-idf/components/freertos/app_startup.c:208
+0x4008a23d: vPortTaskWrapper at /home/pi/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/pi/esp32/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/pi/esp32/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x4008ec76: insert_free_block at /home/pi/esp32/esp-idf/components/heap/tlsf/tlsf_control_functions.h:404
+ (inlined by) block_insert at /home/pi/esp32/esp-idf/components/heap/tlsf/tlsf_control_functions.h:430
+ (inlined by) tlsf_free at /home/pi/esp32/esp-idf/components/heap/tlsf/tlsf.c:633
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x4008ec73: insert_free_block at /home/pi/esp32/esp-idf/components/heap/tlsf/tlsf_control_functions.h:403
+ (inlined by) block_insert at /home/pi/esp32/esp-idf/components/heap/tlsf/tlsf_control_functions.h:430
+ (inlined by) tlsf_free at /home/pi/esp32/esp-idf/components/heap/tlsf/tlsf.c:633
+0x4008e77c: multi_heap_free_impl at /home/pi/esp32/esp-idf/components/heap/multi_heap.c:233
+0x400823a7: heap_caps_free at /home/pi/esp32/esp-idf/components/heap/heap_caps_base.c:75
+0x40091559: free at /home/pi/esp32/esp-idf/components/newlib/src/heap.c:34
+0x400d8fcf: cJSON_Delete at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:273
+0x400d8f99: cJSON_Delete at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:261
+0x400d890e: _http_event_handler at /home/pi/remoteLED/main/remoteLED.c:147
+0x4016673f: http_dispatch_event at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:204
+0x400e318e: esp_http_client_perform at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:1394
+0x400d897c: get_auth_token at /home/pi/remoteLED/main/remoteLED.c:212
+0x400d8ab1: app_main at /home/pi/remoteLED/main/remoteLED.c:284
+0x4016d6d7: main_task at /home/pi/esp32/esp-idf/components/freertos/app_startup.c:208
+0x4008a23d: vPortTaskWrapper at /home/pi/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/pi/esp32/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/pi/esp32/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0m

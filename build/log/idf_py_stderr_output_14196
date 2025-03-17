@@ -1,0 +1,11 @@
+/home/pi/remoteLED/main/remoteLED.c: In function '_http_event_handler':
+/home/pi/remoteLED/main/remoteLED.c:125:31: warning: ordered comparison of pointer with integer zero [-Wextra]
+  125 |                 if(auth_token > 0){
+      |                               ^
+/home/pi/remoteLED/main/remoteLED.c:126:25: error: implicit declaration of function 'ESPLOGI'; did you mean 'ESP_LOGI'? [-Wimplicit-function-declaration]
+  126 |                         ESPLOGI("Auth token available...");
+      |                         ^~~~~~~
+      |                         ESP_LOGI
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:82: esp-idf/main/CMakeFiles/__idf_main.dir/remoteLED.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:6157: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:149: all] Error 2

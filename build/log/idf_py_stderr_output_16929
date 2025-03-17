@@ -1,0 +1,4 @@
+/home/pi/remoteLED/main/remoteLED.c: In function '_http_event_handler':
+/home/pi/remoteLED/main/remoteLED.c:125:31: warning: ordered comparison of pointer with integer zero [-Wextra]
+  125 |                 if(auth_token > 0){
+      |                               ^

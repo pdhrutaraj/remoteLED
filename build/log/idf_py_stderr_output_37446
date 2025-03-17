@@ -1,0 +1,175 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/pi/esp32/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/pi/esp32/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x40081b0d: panic_abort at /home/pi/esp32/esp-idf/components/esp_system/panic.c:454
+0x40089799: esp_system_abort at /home/pi/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40091529: __assert_func at /home/pi/esp32/esp-idf/components/newlib/src/assert.c:80
+0x4008e8df: tlsf_free at /home/pi/esp32/esp-idf/components/heap/tlsf/tlsf.c:629 (discriminator 1)
+0x4008e77c: multi_heap_free_impl at /home/pi/esp32/esp-idf/components/heap/multi_heap.c:233
+0x400823a7: heap_caps_free at /home/pi/esp32/esp-idf/components/heap/heap_caps_base.c:75
+0x40091559: free at /home/pi/esp32/esp-idf/components/newlib/src/heap.c:34
+0x400d8faf: cJSON_Delete at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:273
+0x400d8f79: cJSON_Delete at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:261
+0x400d88ee: _http_event_handler at /home/pi/remoteLED/main/remoteLED.c:147
+0x4016671f: http_dispatch_event at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:204
+0x400e316e: esp_http_client_perform at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:1394
+0x400d895c: get_auth_token at /home/pi/remoteLED/main/remoteLED.c:212
+0x400d8a91: app_main at /home/pi/remoteLED/main/remoteLED.c:284
+0x4016d6b7: main_task at /home/pi/esp32/esp-idf/components/freertos/app_startup.c:208
+0x4008a23d: vPortTaskWrapper at /home/pi/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/pi/esp32/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/pi/esp32/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x40081b0d: panic_abort at /home/pi/esp32/esp-idf/components/esp_system/panic.c:454
+0x40089799: esp_system_abort at /home/pi/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40091529: __assert_func at /home/pi/esp32/esp-idf/components/newlib/src/assert.c:80
+0x4008e8df: tlsf_free at /home/pi/esp32/esp-idf/components/heap/tlsf/tlsf.c:629 (discriminator 1)
+0x4008e77c: multi_heap_free_impl at /home/pi/esp32/esp-idf/components/heap/multi_heap.c:233
+0x400823a7: heap_caps_free at /home/pi/esp32/esp-idf/components/heap/heap_caps_base.c:75
+0x40091559: free at /home/pi/esp32/esp-idf/components/newlib/src/heap.c:34
+0x400d8faf: cJSON_Delete at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:273
+0x400d8f79: cJSON_Delete at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:261
+0x400d88ee: _http_event_handler at /home/pi/remoteLED/main/remoteLED.c:147
+0x4016671f: http_dispatch_event at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:204
+0x400e316e: esp_http_client_perform at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:1394
+0x400d895c: get_auth_token at /home/pi/remoteLED/main/remoteLED.c:212
+0x400d8a91: app_main at /home/pi/remoteLED/main/remoteLED.c:284
+0x4016d6b7: main_task at /home/pi/esp32/esp-idf/components/freertos/app_startup.c:208
+0x4008a23d: vPortTaskWrapper at /home/pi/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/pi/esp32/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/pi/esp32/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x40081b0d: panic_abort at /home/pi/esp32/esp-idf/components/esp_system/panic.c:454
+0x40089799: esp_system_abort at /home/pi/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40091529: __assert_func at /home/pi/esp32/esp-idf/components/newlib/src/assert.c:80
+0x4008e8df: tlsf_free at /home/pi/esp32/esp-idf/components/heap/tlsf/tlsf.c:629 (discriminator 1)
+0x4008e77c: multi_heap_free_impl at /home/pi/esp32/esp-idf/components/heap/multi_heap.c:233
+0x400823a7: heap_caps_free at /home/pi/esp32/esp-idf/components/heap/heap_caps_base.c:75
+0x40091559: free at /home/pi/esp32/esp-idf/components/newlib/src/heap.c:34
+0x400d8faf: cJSON_Delete at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:273
+0x400d8f79: cJSON_Delete at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:261
+0x400d88ee: _http_event_handler at /home/pi/remoteLED/main/remoteLED.c:147
+0x4016671f: http_dispatch_event at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:204
+0x400e316e: esp_http_client_perform at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:1394
+0x400d895c: get_auth_token at /home/pi/remoteLED/main/remoteLED.c:212
+0x400d8a91: app_main at /home/pi/remoteLED/main/remoteLED.c:284
+0x4016d6b7: main_task at /home/pi/esp32/esp-idf/components/freertos/app_startup.c:208
+0x4008a23d: vPortTaskWrapper at /home/pi/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/pi/esp32/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/pi/esp32/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x40081b0d: panic_abort at /home/pi/esp32/esp-idf/components/esp_system/panic.c:454
+0x40089799: esp_system_abort at /home/pi/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40091529: __assert_func at /home/pi/esp32/esp-idf/components/newlib/src/assert.c:80
+0x4008e8df: tlsf_free at /home/pi/esp32/esp-idf/components/heap/tlsf/tlsf.c:629 (discriminator 1)
+0x4008e77c: multi_heap_free_impl at /home/pi/esp32/esp-idf/components/heap/multi_heap.c:233
+0x400823a7: heap_caps_free at /home/pi/esp32/esp-idf/components/heap/heap_caps_base.c:75
+0x40091559: free at /home/pi/esp32/esp-idf/components/newlib/src/heap.c:34
+0x400d8faf: cJSON_Delete at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:273
+0x400d8f79: cJSON_Delete at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:261
+0x400d88ee: _http_event_handler at /home/pi/remoteLED/main/remoteLED.c:147
+0x4016671f: http_dispatch_event at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:204
+0x400e316e: esp_http_client_perform at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:1394
+0x400d895c: get_auth_token at /home/pi/remoteLED/main/remoteLED.c:212
+0x400d8a91: app_main at /home/pi/remoteLED/main/remoteLED.c:284
+0x4016d6b7: main_task at /home/pi/esp32/esp-idf/components/freertos/app_startup.c:208
+0x4008a23d: vPortTaskWrapper at /home/pi/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/pi/esp32/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/pi/esp32/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x40081b0d: panic_abort at /home/pi/esp32/esp-idf/components/esp_system/panic.c:454
+0x40089799: esp_system_abort at /home/pi/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40091529: __assert_func at /home/pi/esp32/esp-idf/components/newlib/src/assert.c:80
+0x4008e8df: tlsf_free at /home/pi/esp32/esp-idf/components/heap/tlsf/tlsf.c:629 (discriminator 1)
+0x4008e77c: multi_heap_free_impl at /home/pi/esp32/esp-idf/components/heap/multi_heap.c:233
+0x400823a7: heap_caps_free at /home/pi/esp32/esp-idf/components/heap/heap_caps_base.c:75
+0x40091559: free at /home/pi/esp32/esp-idf/components/newlib/src/heap.c:34
+0x400d8faf: cJSON_Delete at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:273
+0x400d8f79: cJSON_Delete at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:261
+0x400d88ee: _http_event_handler at /home/pi/remoteLED/main/remoteLED.c:147
+0x4016671f: http_dispatch_event at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:204
+0x400e316e: esp_http_client_perform at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:1394
+0x400d895c: get_auth_token at /home/pi/remoteLED/main/remoteLED.c:212
+0x400d8a91: app_main at /home/pi/remoteLED/main/remoteLED.c:284
+0x4016d6b7: main_task at /home/pi/esp32/esp-idf/components/freertos/app_startup.c:208
+0x4008a23d: vPortTaskWrapper at /home/pi/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/pi/esp32/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/pi/esp32/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x40081b0d: panic_abort at /home/pi/esp32/esp-idf/components/esp_system/panic.c:454
+0x40089799: esp_system_abort at /home/pi/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40091529: __assert_func at /home/pi/esp32/esp-idf/components/newlib/src/assert.c:80
+0x4008e8df: tlsf_free at /home/pi/esp32/esp-idf/components/heap/tlsf/tlsf.c:629 (discriminator 1)
+0x4008e77c: multi_heap_free_impl at /home/pi/esp32/esp-idf/components/heap/multi_heap.c:233
+0x400823a7: heap_caps_free at /home/pi/esp32/esp-idf/components/heap/heap_caps_base.c:75
+0x40091559: free at /home/pi/esp32/esp-idf/components/newlib/src/heap.c:34
+0x400d8faf: cJSON_Delete at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:273
+0x400d8f79: cJSON_Delete at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:261
+0x400d88ee: _http_event_handler at /home/pi/remoteLED/main/remoteLED.c:147
+0x4016671f: http_dispatch_event at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:204
+0x400e316e: esp_http_client_perform at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:1394
+0x400d895c: get_auth_token at /home/pi/remoteLED/main/remoteLED.c:212
+0x400d8a91: app_main at /home/pi/remoteLED/main/remoteLED.c:284
+0x4016d6b7: main_task at /home/pi/esp32/esp-idf/components/freertos/app_startup.c:208
+0x4008a23d: vPortTaskWrapper at /home/pi/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/pi/esp32/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/pi/esp32/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x40081b0d: panic_abort at /home/pi/esp32/esp-idf/components/esp_system/panic.c:454
+0x40089799: esp_system_abort at /home/pi/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40091529: __assert_func at /home/pi/esp32/esp-idf/components/newlib/src/assert.c:80
+0x4008e8df: tlsf_free at /home/pi/esp32/esp-idf/components/heap/tlsf/tlsf.c:629 (discriminator 1)
+0x4008e77c: multi_heap_free_impl at /home/pi/esp32/esp-idf/components/heap/multi_heap.c:233
+0x400823a7: heap_caps_free at /home/pi/esp32/esp-idf/components/heap/heap_caps_base.c:75
+0x40091559: free at /home/pi/esp32/esp-idf/components/newlib/src/heap.c:34
+0x400d8faf: cJSON_Delete at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:273
+0x400d8f79: cJSON_Delete at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:261
+0x400d88ee: _http_event_handler at /home/pi/remoteLED/main/remoteLED.c:147
+0x4016671f: http_dispatch_event at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:204
+0x400e316e: esp_http_client_perform at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:1394
+0x400d895c: get_auth_token at /home/pi/remoteLED/main/remoteLED.c:212
+0x400d8a91: app_main at /home/pi/remoteLED/main/remoteLED.c:284
+0x4016d6b7: main_task at /home/pi/esp32/esp-idf/components/freertos/app_startup.c:208
+0x4008a23d: vPortTaskWrapper at /home/pi/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/pi/esp32/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/pi/esp32/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x40081b0d: panic_abort at /home/pi/esp32/esp-idf/components/esp_system/panic.c:454
+0x40089799: esp_system_abort at /home/pi/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40091529: __assert_func at /home/pi/esp32/esp-idf/components/newlib/src/assert.c:80
+0x4008e8df: tlsf_free at /home/pi/esp32/esp-idf/components/heap/tlsf/tlsf.c:629 (discriminator 1)
+0x4008e77c: multi_heap_free_impl at /home/pi/esp32/esp-idf/components/heap/multi_heap.c:233
+0x400823a7: heap_caps_free at /home/pi/esp32/esp-idf/components/heap/heap_caps_base.c:75
+0x40091559: free at /home/pi/esp32/esp-idf/components/newlib/src/heap.c:34
+0x400d8faf: cJSON_Delete at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:273
+0x400d8f79: cJSON_Delete at /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.c:261
+0x400d88ee: _http_event_handler at /home/pi/remoteLED/main/remoteLED.c:147
+0x4016671f: http_dispatch_event at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:204
+0x400e316e: esp_http_client_perform at /home/pi/esp32/esp-idf/components/esp_http_client/esp_http_client.c:1394
+0x400d895c: get_auth_token at /home/pi/remoteLED/main/remoteLED.c:212
+0x400d8a91: app_main at /home/pi/remoteLED/main/remoteLED.c:284
+0x4016d6b7: main_task at /home/pi/esp32/esp-idf/components/freertos/app_startup.c:208
+0x4008a23d: vPortTaskWrapper at /home/pi/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/pi/esp32/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/pi/esp32/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0m
