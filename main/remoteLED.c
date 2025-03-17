@@ -93,7 +93,16 @@ void wifi_init() {
     xEventGroupWaitBits(wifi_event_group, WIFI_CONNECTED_BIT, pdFALSE, pdTRUE, portMAX_DELAY);
 }
 //
-
+//led control
+void control_led(const char *state) {
+    if (strcmp(state, "on") == 0) {
+        gpio_set_level(LED_GPIO, 1);
+        ESP_LOGI(TAG, "LED TURNED ON");
+    } else {
+        gpio_set_level(LED_GPIO, 0);
+        ESP_LOGI(TAG, "LED TURNED OFF");
+    }
+}
 //
 // **HTTP Event Handler_1 wotking
 //
@@ -122,6 +131,25 @@ esp_err_t _http_event_handler(esp_http_client_event_t *evt) {
                     //ESP_LOGE(TAG, "Error: Access token not found in response");
                 }
                 cJSON_Delete(json);
+	    	if(auth_token > 0){
+			ESP_LOGI(TAG, "Auth token available...");
+			//
+		/*
+		cJSON *switch_obj = cJSON_GetArrayItem(json, 0);  // Get first switch object
+                if (switch_obj) {
+                    cJSON *state = cJSON_GetObjectItem(json, "state");
+                    if (cJSON_IsString(state)) {
+                        ESP_LOGI(TAG, "Switch State: %s", state->valuestring);
+                        control_led(state->valuestring);  // Control LED
+                    }
+                 } else {
+                    ESP_LOGE(TAG, "Error: No switch data found");
+                }
+                cJSON_Delete(json);
+		*/
+			//
+		}
+
             } else {
                 ESP_LOGE(TAG, "Error: Failed to parse JSON");
             }
@@ -170,12 +198,12 @@ void get_auth_token() {
     };
 */
      esp_http_client_config_t config = {
-    .url = "https://eapi-vijn.onrender.com/api/token/",
-    .event_handler = _http_event_handler,
-    .method = HTTP_METHOD_POST,
-    .crt_bundle_attach = esp_crt_bundle_attach,
+    	.url = "https://eapi-vijn.onrender.com/api/token/",
+    	.event_handler = _http_event_handler,
+    	.method = HTTP_METHOD_POST,
+    	.crt_bundle_attach = esp_crt_bundle_attach,
     //.timeout_ms = 15000,  // Increase timeout to 15 seconds
-    .timeout_ms = 10000,  // Increase timeout to 1 seconds
+    	.timeout_ms = 10000,  // Increase timeout to 1 seconds
 	};
     esp_http_client_handle_t client = esp_http_client_init(&config);
 
@@ -205,41 +233,9 @@ void get_auth_token() {
     esp_http_client_cleanup(client);
 }
 
-//
+
 // Function to fetch switch state
-/*
-void fetch_switch_state() {
-    char auth_header[600];
-    snprintf(auth_header, sizeof(auth_header), "Bearer %s", auth_token);
- 
-     esp_http_client_config_t config = {
-    .url = "https://eapi-vijn.onrender.com/api/switches/",
-    .event_handler = _http_event_handler,
-    .method = HTTP_METHOD_POST,
-    .crt_bundle_attach = esp_crt_bundle_attach,
-    .timeout_ms = 15000,  // Increase timeout to 15 seconds
-	};
-    esp_http_client_handle_t client = esp_http_client_init(&config);
 
-    esp_http_client_set_header(client, auth_header, auth_token);
-    
-    esp_err_t err = esp_http_client_perform(client);
-    if (err == ESP_OK) {
-        cJSON *json = cJSON_Parse(auth_token);
-        cJSON *state = cJSON_GetObjectItem(json, "state");
-        if (cJSON_IsNumber(state)) {
-            int switch_state = state->valueint;
-            gpio_set_level(LED_GPIO, switch_state);
-            ESP_LOGI(TAG, "Switch state: %d, LED: %s", switch_state, switch_state ? "ON" : "OFF");
-        }
-        cJSON_Delete(json);
-    } else {
-        ESP_LOGE(TAG, "HTTP GET failed: %s", esp_err_to_name(err));
-    }
-
-    esp_http_client_cleanup(client);
-}
-*/
 //working
 
 void fetch_switch_state() {
